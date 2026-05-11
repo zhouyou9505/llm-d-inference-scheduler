@@ -13,3 +13,6 @@ dependencies:
     repository: "file://../epplib"
     # This is needed to make use of the common values.yaml in ./config/charts/epplib/values.yaml
     alias: inferenceExtension
+    import-values:
+      - child: inferenceExtension
+        parent: inferenceExtension

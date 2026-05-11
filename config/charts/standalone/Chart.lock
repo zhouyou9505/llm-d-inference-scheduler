@@ -1,0 +1,6 @@
+dependencies:
+- name: inference-extension
+  repository: file://../epplib
+  version: 0.0.0
+digest: sha256:89456a94fc583a63c6d55dca8d6c953084b9878d99fd46b8614fcd0be39c8326
+generated: "2026-05-11T09:49:02.314256+08:00"

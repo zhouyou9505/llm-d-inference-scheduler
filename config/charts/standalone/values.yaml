@@ -1,27 +1,9 @@
 inferenceExtension:
-  replicas: 1
-  image:
-    registry: ghcr.io/llm-d
-    repository: llm-d-inference-scheduler-dev
-    tag: main
-    pullPolicy: Always
-  extProcPort: 9002
   extraServicePorts:
     - name: http
       port: 8081
       protocol: TCP
       targetPort: 8081
-  env: []
-  pluginsConfigFile: "default-plugins.yaml"
-  # Resource requests and limits for the EPP container.
-  # These defaults are sized for a standard EPP deployment with built-in scheduling plugins.
-  # CPU limits are intentionally unset to allow bursting to all available node CPUs during scheduling spikes.
-  resources:
-    requests:
-      cpu: "4"
-      memory: 8Gi
-    limits:
-      memory: 16Gi
 
   endpointsServer:
     # set it to false when you want to deploy EPP with inferencepool
